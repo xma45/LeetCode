@@ -14,6 +14,20 @@ class Solution(object):
                     end -= 1
 
 
+    def twoSum(nums, target):
+        number_index = [(v, index) for index, v in enumerate(nums)]
+        number_index.sort()
+        begin, end = 0, len(nums) - 1
+        while begin < end:
+            current_number = number_index[begin][0] + number_index[end][0]
+            if current_number = target:
+                return [number_index[begin][1], number_index[end][1]]
+                elif current_number < target:
+                    begin += 1
+                    else:
+                        end -= 1
+
+
 if __name__ == '__main__':
     # begin
     s = Solution()
